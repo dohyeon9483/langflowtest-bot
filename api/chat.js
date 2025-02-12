@@ -3,7 +3,8 @@ const fs = require('fs');
 const app = express();
 app.use(express.json());
 
-const flow = JSON.parse(fs.readFileSync('langtest.json', 'utf-8'));
+const path = require('path');
+const flow = JSON.parse(fs.readFileSync(path.join(__dirname, '../langtest.json'), 'utf-8'));
 
 app.get('/', (req, res) => {
   res.send('✅ Langflow Chatbot is Running!');
