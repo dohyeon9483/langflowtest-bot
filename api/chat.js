@@ -5,12 +5,10 @@ app.use(express.json());
 
 const flow = JSON.parse(fs.readFileSync('langtest.json', 'utf-8'));
 
-// 루트 경로 처리
 app.get('/', (req, res) => {
   res.send('✅ Langflow Chatbot is Running!');
 });
 
-// 챗봇 API
 app.post('/api/chat', (req, res) => {
   const userMessage = req.body.message;
   const response = flow.responses.find(r => r.trigger === userMessage);
