@@ -1,0 +1,12 @@
+{
+    "name": "langflow-bot",
+    "version": "1.0.0",
+    "main": "api/chatbot.js",
+    "scripts": {
+      "start": "node api/chatbot.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+  }
+  
