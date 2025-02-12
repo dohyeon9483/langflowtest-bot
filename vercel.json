@@ -1,14 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    { 
-      "src": "api/chat.js", 
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["langtest.json"]
-      }
-    }
-  ],
   "routes": [
     { "src": "/api/chat", "dest": "api/chat.js" }
   ]
